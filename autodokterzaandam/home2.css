@@ -169,7 +169,7 @@ body {
         background-color: var(--offred);
     }
 
-    .nav_button:hover, .nav_button:focus {
+    .nav_button:hover {
         background-color: var(--lightred);
         border-color: var(--lightred);
         color: black;
@@ -218,7 +218,7 @@ body {
         padding: 8px 16px;
     }
 
-    #button_fixed:hover, #button_fixed:focus {
+    #button_fixed:hover {
         background-color: var(--lightred);
         color: black;
     }
@@ -319,6 +319,24 @@ body {
         width: 60vw;
         height: 40vh;
         border: 5px solid var(--offred);
+    }
+
+    /* ================ Opening ================ */
+
+    .opening {}
+    .opening_content {
+        /* width: 90vw; */
+    }
+    .opening_table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        /* width: 90%; */
+    }
+    .opening_table tr:nth-child(odd) {
+        background-color: rgb(236, 236, 236);
+    }
+    .opening_table tr:nth-child(even) {
+        background-color: white;
     }
 
     /* ================ Made by ================ */
