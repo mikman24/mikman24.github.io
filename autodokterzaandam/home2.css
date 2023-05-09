@@ -127,39 +127,26 @@ body {
     .nav_item {
         column-gap: 40px;
         width: 120px;
-        padding: 8px;
+        padding: 3px 5px;
         text-align: center;
-    }
-
-    .nav_page {
         border: var(--offred) solid 2px;
         border-radius: 100px;
     }
 
-    .nav_page:hover, .nav_page:focus {
+    .nav_item:hover, .nav_item:focus {
         background-color: var(--offred);
     }
 
-    .nav_link {
-        /* background-color: blue; */
-        padding: 5px;
-    }
-
-    .button {
-        color: white;
-        background-color: var(--offred);
-        padding: 8px;
-        text-align: center;
-        border-radius: 100px;
-        /* font-size: 0.8em; */
+    .nav_button {
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: lighter;
         letter-spacing: 1px;
-        transition: all 0.2s;
+        background-color: var(--offred);
     }
 
-    .button:hover, .button:focus {
+    .nav_button:hover, .nav_button:focus {
         background-color: var(--lightred);
+        border-color: var(--lightred);
         color: black;
     }
     
