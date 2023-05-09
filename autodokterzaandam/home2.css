@@ -54,7 +54,7 @@ body {
     background-color: blue;
     /* font-family: 'Poppins', sans-serif; */
     /* height: 5000px; */
-    padding-top: 50px;
+    padding-top: 90px;
 }
 
 /* ============================================================================================== */
@@ -70,14 +70,39 @@ body {
         width: 100%;
         top: 0;
         position: fixed;
+    }
+
+    .header_top {
+        background-color: green;
+        color: white;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 5px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+        font-size: 3vw;
+    }
+
+    .top_contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 5px;
+    }
+
+    svg {
+        fill: white;
+    }
+
+    .header_content {
         background-color: var(--navbarcolour);
         color: white;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
-
-    .header_content {
-        max-width: 95%;
+        max-width: 100%;
         margin: 0 auto;
         padding: 0 30px;
         height: 60px;
@@ -104,7 +129,7 @@ body {
     .nav {
         transition: all 0.3s ease-out;
         position: fixed;
-        top: 60px;
+        top: 90px;
         left: 0;
         background-color: var(--navbarcolour);
         width: 100%;
@@ -130,7 +155,6 @@ body {
         padding: 3px 5px;
         text-align: center;
         border: var(--offred) solid 2px;
-        /*background-color: green;*/
         border-radius: 100px;
     }
 
@@ -206,11 +230,11 @@ body {
         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(3px);
         border-radius: 5px;
-        /* border-left: var(--offred) 8px solid; */
         border-left: rgba(214, 36, 36, 0.8) 8px solid;
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         border-right: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        /* border: 1px solid rgba(255, 255, 255, 0.5); */
         text-shadow: 8px 5px 5px rgba(0, 0, 0, 0.3);
     }
 
