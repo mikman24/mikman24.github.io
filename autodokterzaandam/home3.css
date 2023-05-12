@@ -27,6 +27,19 @@
     color: white;
     background: red;
 }
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--offred);
+    border-radius: 100vw;
+}
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: rgba(42, 39, 39, 1) var(--offred);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -42,11 +55,11 @@ ul {
 
 html, body {
     position: absolute;
-    /* Removes horizontal scroll(bar) */
     max-width: 100%;
     overflow-x: hidden;
     position: relative;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -58,13 +71,13 @@ body {
 h2 {
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 5px;
-    /*  */
-    min-width: fit-content;
-    margin: 0 auto;
-    color: black;
-    padding: 0 1rem;
     font-size: 2rem;
+    border-bottom: 0.5rem solid var(--offred);
+    text-align: center;
+    max-width: fit-content;
+    margin: 0 auto;
 }
 
 svg {
@@ -80,7 +93,6 @@ svg {
     /* ================ Extra ================ */
 
     .content {
-        /* max-width: 94%; */
         max-width: 45ch;
         padding: 0 2rem;
         margin: 0 auto;
@@ -108,13 +120,12 @@ svg {
         top: 0;
         position: fixed;
         background-color: var(--navbarcolour);
+        color: white;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
-
     .header_top {
         background-color: green;
-        color: white;
         min-width: 100%;
         margin: 0 auto;
         padding: 0 0.5rem;
@@ -125,38 +136,27 @@ svg {
         column-gap: 1rem;
         font-size: 0.65rem;
     }
-
     .top_contact {
         display: flex;
         align-items: center;
         justify-content: center;
         column-gap: 0.5rem;
     }
-
     .header_bottom {
-        color: white;
         height: 4rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-
     .logo {
         display: flex;
         align-items: center;
         column-gap: 0.5rem;
     }
-
-    .logo_img {
-        max-width: 100px;
-        max-height: 100px;
-    }
-
     .logo_text {
         font-size: 1rem;
         letter-spacing: -1px;
     }
-
     .nav {
         transition: all 0.3s ease-out;
         position: fixed;
@@ -166,20 +166,16 @@ svg {
         width: 100%;
         padding: 1rem 0;
         transform: translateX(100%);
-        font-weight: bolder;
     }
-
     .nav_open {
         transform: translateX(0%) !important;
     }
-
     .nav_list {
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 0.5rem;
     }
-
     .nav_item {
         width: 7.5rem;
         padding: 0.2rem 0.5rem;
@@ -187,43 +183,29 @@ svg {
         border: var(--offred) solid 2px;
         border-radius: 100px;
     }
-
     .nav_item:hover, .nav_item:focus {
         background-color: var(--offred);
     }
-
     .nav_button {
         text-transform: uppercase;
-        font-weight: lighter;
         letter-spacing: 1px;
         background-color: var(--offred);
     }
-
-    .nav_button:hover {
-        background-color: var(--lightred);
-        border-color: var(--lightred);
-        color: black;
-    }
-    
     .hamburger {
         display: block;
         background-color: var(--offred);
         padding: 6px;
         border-radius: 5px;
     }
-    
     .hamburger_open .bar:nth-child(1){
         transform: translateY(7px) rotate(45deg);
     }
-    
     .hamburger_open .bar:nth-child(2){
         opacity: 0;
     }
-    
     .hamburger_open .bar:nth-child(3){
         transform: translateY(-7px) rotate(-45deg);
     }
-    
     .bar {
         height: 2px;
         width: 27px;
@@ -232,43 +214,21 @@ svg {
         transition: all 0.3s ease-out;
     }
 
-    /* ================ Button ================ */
-
-    #button_fixed {
-        z-index: 10;
-        position: fixed;
-        bottom: 5%;
-        right: 5%;
-        background-color: var(--offred);
-        color: white;
-        text-transform: uppercase;
-        /* font-weight: bold; */
-        letter-spacing: 1px;
-        border-radius: 100px;
-        padding: 0.5rem 1rem;
-    }
-
-    #button_fixed:hover {
-        background-color: var(--lightred);
-        color: black;
-    }
-
     /* ================ Banner ================ */
 
     .banner {
         width: 100%;
         overflow-x: hidden;
         background-image: url("https://images.pexels.com/photos/4480461/pexels-photo-4480461.jpeg?auto=compress&cs=tinysrgb&w=600");
-        background-position: center;
         font-family: 'Bebas Neue', sans-serif;
-        letter-spacing: 2px;
+        letter-spacing: 0.5rem;
     }
 
     .banner_info {
         height: calc(100vh - 6rem);
         min-width: 84%;
-        display: flex;
         padding: 0;
+        display: flex;
         align-items: center;
         justify-content: space-between;
     }
@@ -298,28 +258,18 @@ svg {
         color: var(--offred);
     }
 
-
     /* ================ Diensten ================ */
 
     .diensten {
-        /* background-color: blue; */
-        /* height: calc(100vh - 6rem); */
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(103, 103, 103)); 
+        color: white;
     }
-
     .diensten_header {
         text-align: center;
         padding: 1rem;
     }
-    
-    .diensten_header h2 {
-        max-width: fit-content;
-        margin: 0 auto;
-        color: black;
-    }
-
     .diensten_scroller {
         --spacer: 1.5rem;
-        color: black;
         display: grid;
         gap: var(--spacer);
         grid-auto-flow: column;
@@ -344,12 +294,10 @@ svg {
         font-size: 1rem;
     }
     .diensten_button {
-        /* border: var(--offred) 1px solid; */
         border-radius: 2rem;
-        color: white;
-        background-color: rgba(214, 36, 36, 0.8);
+        background-color: rgba(214, 36, 36, 1);
         width: fit-content;
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 1rem;
         margin: 0 auto;
     }
     .snaps_inline {
@@ -360,45 +308,92 @@ svg {
         scroll-snap-align: start;
     }
 
-    /* .diensten_cards {
-        background-color: orange;
-        display: flex;
-        justify-content: space-between;
-        margin: 5% auto;
-        width: 80%;
-        min-height: 60%;
-        padding: 0;
-    }
+    /* ================ Contact ================ */
 
-    .diensten_card {
-        background-color: yellow;
+    .contact {
+        width: 100%;
+        padding: 1rem;
+    }
+    .contact h2 {
+        padding-top: 1rem;
+    }
+    .info {
         color: black;
-        padding: 0.5rem;
-        text-align: center;
-    }
+        padding: 2rem 1rem;
+        min-height: 10rem;
+        width: 94%;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
 
-    .diensten_card h3 {
-        font-size: 1.5rem;
     }
-
-    .diensten_card p {
-        font-size: 1rem;
-    }
-
-    .arrow {
-        text-align: center;
-        min-width: 15%;
+    .contact_phone {
         display: flex;
         align-items: center;
-
+        gap: 0.5rem;
+    }
+    .contact_phone svg {
+        fill: currentColor;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .contact_email {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .contact_email svg {
+        fill: currentColor;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
-    .arrow svg {
-        fill: var(--navbarcolour);
-    } */
 
-    /* ================  ================ */
-    /* ================  ================ */
+    /* ================ Locatie ================ */
+
+    .adres {
+        width: 100%;
+        padding: 1rem;
+    }
+    .adres h2 {
+        padding-top: 1rem;
+    }
+    .adres ul {
+        font-size: 1.25rem;
+    }
+    .adres iframe {
+        min-width: 15rem;
+        min-height: 15rem;
+    }
+
+    /* ================ Tijden ================ */
+
+    .opening {
+        width: 100%;
+        padding: 1rem;
+    }
+    .opening h2 {
+        padding-top: 1rem;
+    }
+    .opening table {
+        font-size: 1.2rem;
+        border: none;
+        border-spacing: 0;
+    }
+    .opening table tr td {
+        padding: 0 0.5rem;
+    }
+    .opening table tr:nth-child(odd) {
+        background-color: rgba(62, 62, 62, 0.2);
+    }
+    .opening table tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .opening table tr td:nth-child(even) {
+        float: right;
+    }
 
     /* ================ Made by ================ */
     .madeby {
