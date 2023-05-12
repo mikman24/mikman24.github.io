@@ -343,6 +343,15 @@ svg {
     .diensten_item p {
         font-size: 1rem;
     }
+    .diensten_button {
+        /* border: var(--offred) 1px solid; */
+        border-radius: 2rem;
+        color: white;
+        background-color: rgba(214, 36, 36, 0.8);
+        width: fit-content;
+        padding: 0.5rem 2rem;
+        margin: 0 auto;
+    }
     .snaps_inline {
         scroll-snap-type: inline mandatory;
         scroll-padding-inline: var(--spacer);
