@@ -27,10 +27,11 @@
     color: white;
     background: red;
 }
-::-webkit-scrollbar {
-    width: 0.5rem;
+/* .diensten_scroller::-webkit-scrollbar {
+    background-color: rgb(100, 63, 63);
+    border-radius: 100vw;
 }
-::-webkit-scrollbar-thumb {
+.diensten_scroller::-webkit-scrollbar-thumb {
     background: var(--offred);
     border-radius: 100vw;
 }
@@ -38,21 +39,13 @@
     * {
         scrollbar-color: rgba(42, 39, 39, 1) var(--offred);
     }
-}
+} */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a {
-    color: inherit;
-    text-decoration: none;
-}
-ul {
-    list-style: none;
-}
-
 html, body {
     position: absolute;
     max-width: 100%;
@@ -61,13 +54,18 @@ html, body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
 body {
     background-color: var(--offwhite);
     background-color: white;
     padding-top: 6rem;
 }
-
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
 h2 {
     display: flex;
     align-items: center;
@@ -79,7 +77,6 @@ h2 {
     max-width: fit-content;
     margin: 0 auto;
 }
-
 svg {
     fill: white;
 }
@@ -88,9 +85,13 @@ svg {
 /* ======================================== Phone styles ======================================== */
 /* ============================================================================================== */
 
-@media screen and (min-width: 350px) {
+@media only screen and (min-width: 350px) {
 
     /* ================ Extra ================ */
+
+    .social {
+        display: none;
+    }
 
     .content {
         max-width: 45ch;
@@ -141,6 +142,10 @@ svg {
         align-items: center;
         justify-content: center;
         column-gap: 0.5rem;
+    }
+    .top_contact svg {
+        width: 1.5rem;
+        height: 1.5rem;
     }
     .header_bottom {
         height: 4rem;
@@ -349,6 +354,25 @@ svg {
         width: 1.5rem;
         height: 1.5rem;
     }
+    .contact_insta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .contact_insta svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .contact_face {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .contact_face svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
 
 
     /* ================ Locatie ================ */
