@@ -27,20 +27,6 @@
     color: white;
     background: red;
 }
-/* .diensten_scroller::-webkit-scrollbar {
-    background-color: rgb(100, 63, 63);
-    border-radius: 100vw;
-}
-.diensten_scroller::-webkit-scrollbar-thumb {
-    background: var(--offred);
-    border-radius: 100vw;
-}
-@supports (scrollbar-color: red blue) {
-    * {
-        scrollbar-color: rgba(42, 39, 39, 1) var(--offred);
-    }
-} */
-
 * {
     margin: 0;
     padding: 0;
@@ -54,8 +40,13 @@ html, body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+:target:before {
+    content: "";
+    display: block;
+    height: 6rem;
+    margin: -6rem 0 0;
+}
 body {
-    background-color: var(--offwhite);
     background-color: white;
     padding-top: 6rem;
 }
@@ -360,6 +351,7 @@ svg {
         gap: 0.5rem;
     }
     .contact_insta svg {
+        fill: currentColor;
         width: 1.5rem;
         height: 1.5rem;
     }
@@ -369,6 +361,7 @@ svg {
         gap: 0.5rem;
     }
     .contact_face svg {
+        fill: currentColor;
         width: 1.5rem;
         height: 1.5rem;
     }
